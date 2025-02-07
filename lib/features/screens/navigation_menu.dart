@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:learnlab/features/screens/canvas_page.dart';
+import 'package:learnlab/features/screens/home_page.dart';
+import 'package:learnlab/features/screens/settings_page.dart';
 
 class NavigationMenu extends StatefulWidget {
   const NavigationMenu({super.key});
@@ -9,35 +12,29 @@ class NavigationMenu extends StatefulWidget {
 
 class _NavigationMenuState extends State<NavigationMenu> {
   int _selectedIndex = 0;
-
+  final PageController _pageController = PageController();
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
-    switch (index) {
-      case 0:
-        Navigator.pushNamed(context, '/');
-        break;
-      case 1:
-        Navigator.pushNamed(context, '/canvas');
-        break;
-      case 2:
-        Navigator.pushNamed(context, '/settings');
-        break;
-    }
+    _pageController.jumpToPage(index);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Navigation Menu'),
-      ),
-      body: Center(
-        child: Text(
-          'Index 3: Navigation Menu',
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-        ),
+      body: PageView(
+        controller: _pageController,
+        children: const [
+          HomePage(),
+          CanvasPage(),
+          SettingsPage(),
+        ],
+        onPageChanged: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

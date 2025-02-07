@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learnlab/features/screens/canvas_page.dart';
 import 'package:learnlab/features/screens/home_page.dart';
+import 'package:learnlab/features/screens/navigation_menu.dart';
 import 'package:learnlab/features/screens/settings_page.dart';
 
 void main() {
@@ -19,12 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const HomePage(),
-        '/canvas': (context) => const CanvasPage(),
-        '/settings': (context) => SettingsPage(),
-      },
+      home: NavigationMenu(),
     );
   }
 }
