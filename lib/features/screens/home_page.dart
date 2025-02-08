@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learnlab/features/chat/pages/ai_chat_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -62,7 +63,9 @@ class HomePage extends StatelessWidget {
                               style: ButtonStyle(
                                   backgroundColor:
                                       MaterialStateProperty.all(Colors.white)),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).push(AiChatPage.route());
+                              },
                               iconAlignment: IconAlignment.start,
                               child: Text('Talk to ILA',
                                   style: TextStyle(color: Colors.black)),
