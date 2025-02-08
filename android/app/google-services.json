@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1038495831229",
+    "project_id": "learnlab-8f239",
+    "storage_bucket": "learnlab-8f239.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038495831229:android:254a83a5943d05201113d4",
+        "android_client_info": {
+          "package_name": "com.raj.sujal.learnlab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqbN3eKqBk_mS5w-vq0xue2a8pQXUL1io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

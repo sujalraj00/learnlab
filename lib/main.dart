@@ -3,8 +3,14 @@ import 'package:learnlab/features/screens/canvas_page.dart';
 import 'package:learnlab/features/screens/home_page.dart';
 import 'package:learnlab/features/screens/navigation_menu.dart';
 import 'package:learnlab/features/screens/settings_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

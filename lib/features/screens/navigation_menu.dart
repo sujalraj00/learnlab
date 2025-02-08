@@ -25,7 +25,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
     return Scaffold(
       body: PageView(
         controller: _pageController,
-        children: const [
+        children: [
           HomePage(),
           CanvasPage(),
           SettingsPage(),
