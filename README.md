@@ -1,6 +1,8 @@
 # learnlab
 
-A new Flutter project.
+AI-powered adaptive learning platform that personalizes study materials, provides AI tutoring, and enhances student engagement.
+
+Video Link - https://youtube.com/shorts/xkmapFBP1og?feature=share
 
 ## Getting Started
 
